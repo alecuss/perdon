@@ -5,18 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Para el amor de mi vida</title>
     <style>
-        /* Estilos CSS */
+        /* Estilos CSS corregidos */
         body {
             margin: 0;
             padding: 20px;
             font-family: 'Arial', sans-serif;
             background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
             min-height: 100vh;
+            color: #333;
+            /* Eliminado overflow: hidden */
+        }
+
+        .page-wrapper {
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #333;
-            /* Quitamos overflow: hidden para permitir scroll */
+            min-height: 100vh;
+            padding: 20px 0;
         }
 
         .container {
@@ -27,8 +32,7 @@
             max-width: 600px;
             width: 90%;
             text-align: center;
-            position: relative;
-            margin: 50px 0;
+            margin: 20px auto;
             animation: fadeIn 1.5s ease-in-out;
         }
 
@@ -52,14 +56,14 @@
         }
 
         .flowers {
-            position: fixed; /* Cambiado a fixed para que las flores caigan en toda la pantalla */
+            position: fixed;
             width: 100%;
             height: 100%;
             top: 0;
             left: 0;
             pointer-events: none;
             z-index: -1;
-            overflow: hidden; /* Añadido para contener las flores */
+            overflow: hidden;
         }
 
         .flower {
@@ -124,7 +128,6 @@
         /* Responsive design */
         @media (max-width: 600px) {
             .container {
-                width: 90%;
                 padding: 20px;
             }
             
@@ -141,27 +144,29 @@
 <body>
     <div class="flowers" id="flowers"></div>
     
-    <div class="container">        
-        <h1>Para el amor de mi vida <span class="heart">❤</span></h1>
-        
-        <p> Mi niña preciosa,</p>
-        
-        <p>Quiero pedirte perdón de todo corazón. Sé que estuve mal enviarte ese sticker y lamento profundamente haberte hecho sentir mal amor</p>
-        
-        <p>Eres la persona más importante en mi vida y no puedo imaginar un día sin ti, en serio te extraño amor. Te amo con toda mi alma y no quiero estar mal contigo.</p>
-        
-        <p>Cada momento a tu lado es un regalo muy lindo de Dios, y prometo hacer todo lo posible para ser mejor cada día por nosotros.</p>
-        
-        <p>Espero que puedas perdonarme y darme la oportunidad de demostrarte lo mucho que te extraño.</p>
-        
-        <p>Con todo mi amor,</p>
-        <p>Alexis</p>
-        
-        <button id="showMore">Haz clic aquí</button>
-        
-        <div class="hidden-message" id="hiddenMessage">
-            <p>No hay palabras que puedan expresar lo mucho que te amo. Eres mi sol, mi razón de ser, mi niña bonita</p>
-            <p>Prometo amarte, cuidarte y respetarte todos los días de mi vida cielito <span class="heart">❤</span></p>
+    <div class="page-wrapper">
+        <div class="container">        
+            <h1>Para el amor de mi vida <span class="heart">❤</span></h1>
+            
+            <p> Mi niña preciosa,</p>
+            
+            <p>Quiero pedirte perdón de todo corazón. Sé que estuve mal enviarte ese sticker y lamento profundamente haberte hecho sentir mal amor</p>
+            
+            <p>Eres la persona más importante en mi vida y no puedo imaginar un día sin ti, en serio te extraño amor. Te amo con toda mi alma y no quiero estar mal contigo.</p>
+            
+            <p>Cada momento a tu lado es un regalo muy lindo de Dios, y prometo hacer todo lo posible para ser mejor cada día por nosotros.</p>
+            
+            <p>Espero que puedas perdonarme y darme la oportunidad de demostrarte lo mucho que te extraño.</p>
+            
+            <p>Con todo mi amor,</p>
+            <p>Alexis</p>
+            
+            <button id="showMore">Haz clic aquí</button>
+            
+            <div class="hidden-message" id="hiddenMessage">
+                <p>No hay palabras que puedan expresar lo mucho que te amo. Eres mi sol, mi razón de ser, mi niña bonita</p>
+                <p>Prometo amarte, cuidarte y respetarte todos los días de mi vida cielito <span class="heart">❤</span></p>
+            </div>
         </div>
     </div>
 
